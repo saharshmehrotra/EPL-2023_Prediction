@@ -24,9 +24,9 @@ st.markdown(f'''   <style>
         
        ''',   unsafe_allow_html=True)
 # Load training data and prediction data
-training_data = pd.read_csv('C:\\Users\\ASUS\\Desktop\\clg\\Projects\\training.csv')
-prediction_data = pd.read_csv('C:\\Users\\ASUS\\Desktop\\clg\\Projects\\prediction_2023.csv')
-eda_data=pd.read_excel('C:\\Users\\ASUS\\Desktop\\clg\\Projects\\PL Table Prediction PDS.xlsx')
+training_data = pd.read_csv('training.csv')
+prediction_data = pd.read_csv('prediction_2023.csv')
+eda_data=pd.read_excel('PL Table Prediction PDS.xlsx')
 
 # Function to train the model
 def train_model(train_data):
@@ -76,7 +76,7 @@ def load_and_filter_data(file_path, selected_position):
     return filtered_data
 # Streamlit app
 # Create sidebar for team selection
-xls = pd.ExcelFile(r"C:\Users\ASUS\Desktop\clg\Projects\PL Master Data.xlsx")
+xls = pd.ExcelFile("PL Master Data.xlsx")
 valid_teams = xls.sheet_names
 with st.sidebar:        
     app = option_menu (
@@ -111,10 +111,10 @@ if app== "Team Data":
     st.title("Team Player's Information")
     selected_team = st.selectbox('Select Team', valid_teams)
     st.write("Team:", selected_team)
-    team_data = pd.read_excel(r"C:\Users\ASUS\Desktop\clg\Projects\PL Master Data(1).xlsx", sheet_name=selected_team)
+    team_data = pd.read_excel("PL Master Data(1).xlsx", sheet_name=selected_team)
     st.write(team_data)
 
-if app == "Previous 2 Seasons Stats":
+if app == "Stats":
     st.subheader("Goal scored by each team in the last 2 years")
 
     # Generate sample data for visualization (replace this with your actual data)
