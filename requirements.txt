@@ -1,3 +1,4 @@
+pip install --upgrade pip
 streamlit
 pandas
 streamlit_options_menu
