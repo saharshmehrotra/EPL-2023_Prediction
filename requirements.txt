@@ -1,6 +1,12 @@
 streamlit
 pandas
 scikit-learn
+sklearn.model_selection
+streamlit_options_menu
+time
+sklearn.ensemble
+plotly.express
+plotly.graph_objects
 plotly
 matplotlib
 seaborn
