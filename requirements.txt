@@ -4,7 +4,6 @@ scikit-learn
 sklearn.model_selection
 streamlit_options_menu
 time
-/home/adminuser/venv/bin/python -m pip install --upgrade pip
 sklearn.ensemble
 plotly.express
 plotly.graph_objects
